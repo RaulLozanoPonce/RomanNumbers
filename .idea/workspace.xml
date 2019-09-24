@@ -15,7 +15,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1REdRJwaAbvQrbSaDuSgbISO7F4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/es/ulpgc" />
   </component>
@@ -36,7 +40,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RomanNumbersTests">
+  <component name="RunManager" selected="JUnit.NumberBreaker_">
+    <configuration name="NumberBreaker_" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RomanNumbers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ulpgc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.ulpgc" />
+      <option name="MAIN_CLASS_NAME" value="es.ulpgc.NumberBreaker_" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RomanNumbersTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RomanNumbers" />
       <extension name="coverage">
@@ -70,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NumberBreaker_" />
         <item itemvalue="JUnit.RomanNumbersTests" />
         <item itemvalue="JUnit.RomanNumbersTests.execute" />
       </list>
@@ -87,5 +107,16 @@
       <updated>1569236179796</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
