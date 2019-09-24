@@ -23,6 +23,7 @@ public class NumberBreaker_ {
     }
 
     private int[][] numberBreak(int number) {
+        if(number >= 10) return new int[][] {{number/10,1}};
         return number == 0 ? null : new int[][] {{number,0}};
     }
 
@@ -34,7 +35,12 @@ public class NumberBreaker_ {
                 {2, new int[][] {{2,0}}},
                 {3, new int[][] {{3,0}}},
                 {4, new int[][] {{4,0}}},
-                {5, new int[][] {{5,0}}}
+                {5, new int[][] {{5,0}}},
+                {10, new int[][] {{1,1}}},
+                {20, new int[][] {{2,1}}},
+                {30, new int[][] {{3,1}}},
+                {40, new int[][] {{4,1}}},
+                {50, new int[][] {{5,1}}}
         };
     }
 }
