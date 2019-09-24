@@ -19,18 +19,21 @@ public class NumberBreaker_ {
 
     @Test
     public void execute(){
-        assertThat(numberBreak(number)).isEqualTo(this.numberBroken);
+        assertThat(breakdown(number)).isEqualTo(this.numberBroken);
     }
 
-    private int[][] numberBreak(int number) {
+    private int[][] breakdown(int number) {
+        if(number <= 0 || number >= 4000) return null;
+        if(number >= 1000) return new int[][] {{number/1000,3}};
         if(number >= 100) return new int[][] {{number/100,2}};
         if(number >= 10) return new int[][] {{number/10,1}};
-        return number == 0 ? null : new int[][] {{number,0}};
+        return new int[][] {{number,0}};
     }
 
     @Parameterized.Parameters
     public static Object[][] cases() {
         return new Object[][]{
+                {-1, null},
                 {0, null},
                 {1, new int[][] {{1,0}}},
                 {2, new int[][] {{2,0}}},
@@ -46,7 +49,11 @@ public class NumberBreaker_ {
                 {200, new int[][] {{2,2}}},
                 {300, new int[][] {{3,2}}},
                 {400, new int[][] {{4,2}}},
-                {500, new int[][] {{5,2}}}
+                {500, new int[][] {{5,2}}},
+                {1000, new int[][] {{1,3}}},
+                {2000, new int[][] {{2,3}}},
+                {3000, new int[][] {{3,3}}},
+                {4000, null}
         };
     }
 }
