@@ -19,15 +19,7 @@ public class NumberBreaker_ {
 
     @Test
     public void execute(){
-        assertThat(breakdown(number)).isEqualTo(this.numberBroken);
-    }
-
-    private int[][] breakdown(int number) {
-        if(number <= 0 || number >= 4000) return null;
-        if(number >= 1000) return new int[][] {{number/1000,3}};
-        if(number >= 100) return new int[][] {{number/100,2}};
-        if(number >= 10) return new int[][] {{number/10,1}};
-        return new int[][] {{number,0}};
+        assertThat(RomanNumbers.breakdown(number)).isEqualTo(this.numberBroken);
     }
 
     @Parameterized.Parameters
@@ -41,16 +33,29 @@ public class NumberBreaker_ {
                 {4, new int[][] {{4,0}}},
                 {5, new int[][] {{5,0}}},
                 {10, new int[][] {{1,1}}},
+                {11, new int[][] {{1,1}, {1,0}}},
+                {15, new int[][] {{1,1}, {5,0}}},
+                {17, new int[][] {{1,1}, {7,0}}},
                 {20, new int[][] {{2,1}}},
                 {30, new int[][] {{3,1}}},
                 {40, new int[][] {{4,1}}},
                 {50, new int[][] {{5,1}}},
                 {100, new int[][] {{1,2}}},
+                {101, new int[][] {{1,2}, {1,0}}},
+                {120, new int[][] {{1,2}, {2,1}}},
+                {153, new int[][] {{1,2}, {5,1}, {3,0}}},
                 {200, new int[][] {{2,2}}},
                 {300, new int[][] {{3,2}}},
                 {400, new int[][] {{4,2}}},
                 {500, new int[][] {{5,2}}},
                 {1000, new int[][] {{1,3}}},
+                {1001, new int[][] {{1,3}, {1,0}}},
+                {1020, new int[][] {{1,3}, {2,1}}},
+                {1045, new int[][] {{1,3}, {4,1}, {5,0}}},
+                {1123, new int[][] {{1,3}, {1,2}, {2,1}, {3,0}}},
+                {1300, new int[][] {{1,3}, {3,2}}},
+                {1607, new int[][] {{1,3}, {6,2}, {7,0}}},
+                {1890, new int[][] {{1,3}, {8,2}, {9,1}}},
                 {2000, new int[][] {{2,3}}},
                 {3000, new int[][] {{3,3}}},
                 {4000, null}

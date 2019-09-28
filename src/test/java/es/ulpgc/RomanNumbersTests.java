@@ -10,12 +10,6 @@ import static org.junit.Assert.assertFalse;
 @RunWith(org.junit.runners.Parameterized.class)
 public class RomanNumbersTests {
 
-    public static final int MIN = 0;
-    public static final int MAX = 4000;
-    public static final String[] ONES = {"I", "II", "III"};
-    public static final String[] HUNDREDS = {"C", "CC", "CCC"};
-    public static final String[] TENS = {"X", "XX", "XXX"};
-    public static final String[] THOUSANDS = {"M", "MM", "MMM"};
     private int number;
     private String value;
     private Object exceptionClass;
@@ -29,40 +23,11 @@ public class RomanNumbersTests {
     @Test
     public void execute(){
         try {
-            assertThat(toRoman(number)).isEqualTo(this.value);
+            assertThat(RomanNumbers.toRoman(number)).isEqualTo(this.value);
             assertFalse(exceptionClass != null);
         }catch (IllegalParameterException e){
             assertFalse(exceptionClass == null);
         }
-    }
-
-    private String toRoman(int number) {
-        if (number <= MIN || number >= MAX) throw new IllegalParameterException();
-        if (number >= 1000) return times(thousands(number), THOUSANDS) + times(hundreds(number), HUNDREDS) + times(tens(number), TENS) + times(ones(number), ONES);
-        if (number >= 100) return times(hundreds(number), HUNDREDS) + times(tens(number), TENS) + times(ones(number), ONES);
-        if (number >= 10) return times(tens(number), TENS) + times(ones(number), ONES);
-        return times(number, ONES);
-    }
-
-    private int thousands(int number) {
-        return (number%10000)/1000;
-    }
-
-    private int ones(int number) {
-        return number % 10;
-    }
-
-    private int tens(int number){
-        return (number%100)/10;
-    }
-
-    private int hundreds(int number){
-        return (number%1000)/100;
-    }
-
-    private String times(int offset, String[] constants) {
-        if(offset == 0) return "";
-        return constants[offset-1];
     }
 
     @Parameterized.Parameters
@@ -85,8 +50,5 @@ public class RomanNumbersTests {
                 {200, "CC", null},
                 {300, "CCC", null}
         };
-    }
-
-    public class IllegalParameterException extends RuntimeException {
     }
 }
