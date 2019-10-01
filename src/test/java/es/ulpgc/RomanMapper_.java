@@ -26,7 +26,15 @@ public class RomanMapper_ {
     @Parameterized.Parameters
     public static Object[][] cases() {
         return new Object[][]{
-                {1, 0, "I"}
+                {1, 0, "I"},
+                {2, 0, "II"},
+                {3, 0, "III"},
+                {4, 0, "IV"},
+                {5, 0, "V"},
+                {6, 0, "VI"},
+                {7, 0, "VII"},
+                {8, 0, "VIII"},
+                {9, 0, "IX"}
         };
     }
 }
