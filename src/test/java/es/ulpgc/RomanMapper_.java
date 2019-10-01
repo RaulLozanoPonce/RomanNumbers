@@ -34,7 +34,8 @@ public class RomanMapper_ {
                 {6, 0, "VI"},
                 {7, 0, "VII"},
                 {8, 0, "VIII"},
-                {9, 0, "IX"}
+                {9, 0, "IX"},
+                {1, 1, "X"},
         };
     }
 }
