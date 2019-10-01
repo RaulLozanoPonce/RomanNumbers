@@ -28,6 +28,18 @@ public class RomanMapper {
         romanMap.put(hashOf(7, 1),"LXX");
         romanMap.put(hashOf(8, 1),"LXXX");
         romanMap.put(hashOf(9, 1),"XC");
+        romanMap.put(hashOf(1, 2),"C");
+        romanMap.put(hashOf(2, 2),"CC");
+        romanMap.put(hashOf(3, 2),"CCC");
+        romanMap.put(hashOf(4, 2),"CD");
+        romanMap.put(hashOf(5, 2),"D");
+        romanMap.put(hashOf(6, 2),"DC");
+        romanMap.put(hashOf(7, 2),"DCC");
+        romanMap.put(hashOf(8, 2),"DCCC");
+        romanMap.put(hashOf(9, 2),"CM");
+        romanMap.put(hashOf(1, 3),"M");
+        romanMap.put(hashOf(2, 3),"MM");
+        romanMap.put(hashOf(3, 3),"MMM");
     }
 
     private static int hashOf(int number, int position) {
