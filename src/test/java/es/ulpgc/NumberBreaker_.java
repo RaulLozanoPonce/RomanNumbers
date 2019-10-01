@@ -19,7 +19,7 @@ public class NumberBreaker_ {
 
     @Test
     public void execute(){
-        assertThat(RomanNumbers.breakdown(number)).isEqualTo(this.numberBroken);
+        assertThat(new NumberBreaker(number).breakdown()).isEqualTo(this.numberBroken);
     }
 
     @Parameterized.Parameters

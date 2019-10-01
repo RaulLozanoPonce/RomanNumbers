@@ -1,9 +1,6 @@
-package es.ulpgc;
+//ReplaceTempWithQuery
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
+package es.ulpgc;
 
 public class RomanNumbers {
 
@@ -41,19 +38,5 @@ public class RomanNumbers {
     private static String times(int offset, String[] constants) {
         if(offset == 0) return "";
         return constants[offset-1];
-    }
-
-    public static int[][] breakdown(int number) {
-        if(number <= 0 || number >= 4000) return null;
-        List<int[]> digits = new ArrayList<int[]>();
-        int digitCount = (Integer.toString(number)).length();
-        for (int i = 0; i < digitCount; i++) {
-            digits.add(new int[] {(int) ((number/Math.pow(10,i))%10),i});
-        }
-        digits = digits.stream()
-                .filter(digitAndPosition -> digitAndPosition[0] != 0)
-                .collect(Collectors.toList());
-        Collections.reverse(digits);
-        return digits.toArray(new int[0][]);
     }
 }
