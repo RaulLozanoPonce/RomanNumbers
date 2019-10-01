@@ -40,7 +40,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RomanMapper_">
+  <component name="RunManager" selected="JUnit.RomanNumbersTests">
     <configuration name="NumberBreakerPerformance_" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RomanNumbers" />
       <extension name="coverage">
@@ -119,10 +119,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RomanNumbersTests" />
         <item itemvalue="JUnit.RomanMapper_" />
         <item itemvalue="JUnit.NumberBreaker_" />
         <item itemvalue="JUnit.NumberBreakerPerformance_" />
-        <item itemvalue="JUnit.RomanNumbersTests" />
         <item itemvalue="JUnit.RomanNumbersTests.execute" />
       </list>
     </recent_temporary>

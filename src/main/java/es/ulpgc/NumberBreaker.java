@@ -15,7 +15,7 @@ public class NumberBreaker {
 
     public int[][] breakdown() {
         if(number <= 0 || number >= 4000) return null;
-        String numberString = number + "";
+        String numberString = Integer.toString(number);
         return streamOf(numberString)
                 .map(i -> tupleOf(numberString, i))
                 .filter(filter -> isNotZero(filter))
